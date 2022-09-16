@@ -29,9 +29,9 @@ public class RadioTest {
     void increaseVolumeOverInterval() {
         Radio radio = new Radio();
 
-        radio.currentVolume = 10;
+        radio.currentVolume = 100;
         radio.increaseVolume();
-        int expected = 10;
+        int expected = 100;
         int actual = radio.currentVolume;
 
         Assertions.assertEquals(expected, actual);
@@ -74,9 +74,9 @@ public class RadioTest {
 
     @Test
     void nextStationOverInterval() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(15);
 
-        radio.currentStation = 9;
+        radio.currentStation = 14;
         radio.next();
         int expected = 0;
         int actual = radio.currentStation;
@@ -86,11 +86,11 @@ public class RadioTest {
 
     @Test
     void prevStationOverInterval() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(15);
 
         radio.currentStation = 0;
         radio.prev();
-        int expected = 9;
+        int expected = 14;
         int actual = radio.currentStation;
 
         Assertions.assertEquals(expected, actual);
