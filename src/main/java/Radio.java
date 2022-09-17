@@ -1,6 +1,6 @@
 public class Radio {
-    public int currentStation;
-    public int currentVolume;
+    protected int currentStation;
+    protected int currentVolume;
 
     public void increaseVolume() {
         if (currentVolume < 10) {
