@@ -4,7 +4,7 @@ public class Radio {
     protected int numberOfStations;
 
     public Radio(int numberOfStations) {
-            this.numberOfStations = numberOfStations;
+        this.numberOfStations = numberOfStations;
     }
 
     public Radio() {
@@ -26,16 +26,15 @@ public class Radio {
     public void next() {
         if (currentStation == (numberOfStations - 1)) {
             currentStation = 0;
-        }
-        else {
+        } else {
             currentStation++;
         }
     }
+
     public void prev() {
         if (currentStation == 0) {
             currentStation = (numberOfStations - 1);
-        }
-        else {
+        } else {
             currentStation--;
         }
     }
